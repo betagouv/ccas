@@ -2,27 +2,27 @@ import React, {useCallback} from 'react'
 import AsyncSelect from 'react-select/async'
 import fetch from 'isomorphic-unfetch'
 
-function AddressInput({ citycode, value, onChange }) {
+function CommuneInput({ value, onChange }) {
   const submitOnChange = useCallback(value => onChange(value))
 
   const getOptions = input => {
     if (input.length < 2) { return [] }
 
-    return fetch('https://api-adresse.data.gouv.fr/search/?' + (citycode ? 'citycode=' + citycode  + '&' : '') + 'q=' + encodeURIComponent(event.target.value))
+    return fetch(`https://geo.api.gouv.fr/communes?nom=${input}&fields=nom,code,departement,region&boost=population`)
       .then(response => response.json())
-      .then(payload => payload.features)
   }
 
   return (
     <div className="form__group">
+        <label htmlFor="commune">Nom de la commune</label>
         <AsyncSelect
         onChange={submitOnChange}
-        placeholder="6 Allée des rosiers"
-        getOptionLabel={({ properties }) => properties.label}
+        placeholder="Béaupréau-en-Mauges"
+        getOptionLabel={({ nom, departement }) => nom + ` (${departement && departement.nom})`}
         loadOptions={getOptions}
         />
     </div>
   )
 }
 
-export default AddressInput
+export default CommuneInput

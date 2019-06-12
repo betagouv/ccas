@@ -2,16 +2,27 @@ import React, {useState, useCallback} from 'react'
 import AddressInput from './address-input'
 
 
-function HoraireInput({ value }) {
+function HoraireInput({ value, index, onChange }) {
+  const days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche']
   return (
-    <p>Du {value.du} au {value.au} { value.heures.map(h => <span>de {h.de} à {h.a}, </span>)}
-    </p>
+    <div>
+      Du
+      <select>
+        { days.map((d,i) => <option value={d} key={i}>{d}</option>)}
+      </select>
+      au
+      <select>
+        { days.map((d,i) => <option value={d} key={i}>{d}</option>)}
+      </select>
+      {value.du} au {value.au} { value.heures.map((h,i) => <span key={i} >de {h.de} à {h.a}, </span>)}
+    </div>
   ) 
 }
 
 function CCASForm({ commune }) {
   const [adresse, setAdresse] = useState()
   const [telephone, setTelephone] = useState('')
+  const [url, setUrl] = useState('')
 
   const handleAdresseChange = useCallback(value => {
     setAdresse(value)
@@ -21,7 +32,11 @@ function CCASForm({ commune }) {
     setTelephone(event.target.value)
   })
 
-  const [horaires, setHoraires] = useState([{
+  const handleURLChange = useCallback(event => {
+    setUrl(event.target.value)
+  })
+
+  const defaultHoraires = {
     du: 'lundi',
     au: 'vendredi',
     heures: [{
@@ -31,23 +46,41 @@ function CCASForm({ commune }) {
       de: '14h',
       a: '17h'
     }]
-  }])
+  }
+
+  const [horaires, setHoraires] = useState([defaultHoraires])
+  const handleAddOpeningHours = event => {
+    let newHoraires = [].concat(horaires)
+    newHoraires.push(defaultHoraires)
+    setHoraires(newHoraires)
+  }
+
+  const handleUpdateOpeningHours = ({index, value}) => {
+    let newHoraires = [].concat(horaires)
+    newHoraires[index] = value
+    setHoraires(newHoraires)
+  }
 
   return (
     <div>
       <div className="form__group">
-          <label htmlFor="adresse">Adresse de votre CCAS</label>
+          <label htmlFor="adresse">Adresse du CCAS</label>
           <AddressInput id="adresse" citycode={commune.code} value={adresse} onChange={handleAdresseChange} />
       </div>
       <div className="form__group">
-          <label htmlFor="telephone">Numéro de téléphone de votre CCAS</label>
+          <label htmlFor="telephone">Numéro de téléphone du CCAS</label>
           <input id="telephone" type="tel" value={telephone} onChange={handleTelephoneChange} />
       </div>
       <div className="form__group">
-          <label htmlFor="horaires">Horaires d'ouverture de votre CCAS</label>
+          <label htmlFor="url">URL vers les informations du CCAS</label>
+          <input id="url" type="tel" value={url} onChange={handleURLChange} />
+      </div>
+      <div className="form__group">
+          <label htmlFor="horaires">Horaires d'ouverture du CCAS</label>
           {
-            horaires.map(h => <HoraireInput value={h} />)
+            horaires.map((h,i) => <HoraireInput value={h} key={i} />)
           }
+          <button onClick={handleAddOpeningHours}>Ajouter une plage de jour</button>
       </div>
     </div>
   )
