@@ -219,14 +219,7 @@ function CCASForm(_ref) {
       helpMessage = _useState10[0],
       setHelpMessage = _useState10[1];
 
-  var _useState11 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({
-    status: "o",
-    payload: {
-      data: {
-        html_url: 'ok'
-      }
-    }
-  }),
+  var _useState11 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
       _useState12 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_useState11, 2),
       result = _useState12[0],
       setResult = _useState12[1];
@@ -311,21 +304,21 @@ function CCASForm(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 97
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "form__group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 98
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
     htmlFor: "adresse",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 99
     },
     __self: this
   }, "\uD83C\uDFE1 Adresse du CCAS"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_address_input__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -335,21 +328,21 @@ function CCASForm(_ref) {
     onChange: setAdresse,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 100
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "form__group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 102
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
     htmlFor: "telephone",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 103
     },
     __self: this
   }, "\uD83D\uDCE0 Num\xE9ro de t\xE9l\xE9phone du CCAS"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
@@ -362,21 +355,21 @@ function CCASForm(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 104
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "form__group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 106
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
     htmlFor: "url",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 107
     },
     __self: this
   }, "\uD83C\uDF0D Page internet avec les informations du CCAS"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
@@ -388,21 +381,21 @@ function CCASForm(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 108
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "form__group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 110
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
     htmlFor: "horaires",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 111
     },
     __self: this
   }, "\uD83D\uDCC5 Horaires d'ouverture du CCAS"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_horaires_input__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -410,21 +403,21 @@ function CCASForm(_ref) {
     onChange: setHoraires,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 112
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "form__group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 114
     },
     __self: this
   }, helpMessage && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     class: "notification error",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 115
     },
     __self: this
   }, "\uD83D\uDEA7 ", helpMessage), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
@@ -433,49 +426,49 @@ function CCASForm(_ref) {
     onClick: save,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 117
     },
     __self: this
   }, sending ? 'Enregistrement en cours…' : 'Enregistrer')), result && result.status && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "form__group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 126
     },
     __self: this
   }, result.status === 'ok' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "notification success",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 129
     },
     __self: this
   }, "Merci beaucoup ! Votre contribution est accessible \xE0 la ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: result.payload.data.html_url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 130
     },
     __self: this
   }, "page suivante"), ". Vous pouvez v\xE9rifier les informations d'un CCAS d'une ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     onClick: onReset,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 131
     },
     __self: this
   }, "autre commune"), ".") || react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "notification error",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 134
     },
     __self: this
   }, "Une erreur a eu lieu. Merci de nous contacter par email \xE0 ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: "mailto:bonjour@mes-aides.gouv.fr?subject=Ajout de CCAS impossible",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 135
     },
     __self: this
   }, "bonjour@mes-aides.gouv.fr"), ".")));
