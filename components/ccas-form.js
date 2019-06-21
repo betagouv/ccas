@@ -112,8 +112,7 @@ function CCASForm({ commune, onReset }) {
           <HorairesInput value={horaires} onChange={setHoraires} />
       </div>
       <div className="form__group">
-        { helpMessage && <div class="notification error">🚧 {helpMessage}</div> }
-
+        { helpMessage && <div className="notification error">🚧 {helpMessage}</div> }
         <button
           className={ `button large ${sending ? 'secondary' : ''}` }
           disabled={sending}
