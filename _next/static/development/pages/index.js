@@ -414,7 +414,7 @@ function CCASForm(_ref) {
     },
     __self: this
   }, helpMessage && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    class: "notification error",
+    className: "notification error",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 115
@@ -426,49 +426,49 @@ function CCASForm(_ref) {
     onClick: save,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 116
     },
     __self: this
   }, sending ? 'Enregistrement en cours…' : 'Enregistrer')), result && result.status && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "form__group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 125
     },
     __self: this
   }, result.status === 'ok' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "notification success",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 128
     },
     __self: this
   }, "Merci beaucoup ! Votre contribution est accessible \xE0 la ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: result.payload.data.html_url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 129
     },
     __self: this
   }, "page suivante"), ". Vous pouvez v\xE9rifier les informations d'un CCAS d'une ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     onClick: onReset,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 130
     },
     __self: this
   }, "autre commune"), ".") || react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "notification error",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 133
     },
     __self: this
   }, "Une erreur a eu lieu. Merci de nous contacter par email \xE0 ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: "mailto:bonjour@mes-aides.gouv.fr?subject=Ajout de CCAS impossible",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 134
     },
     __self: this
   }, "bonjour@mes-aides.gouv.fr"), ".")));
