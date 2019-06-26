@@ -32671,32 +32671,25 @@ function Index() {
       lineNumber: 33
     },
     __self: this
-  }, "\uD83C\uDFE1 CCAS"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-    className: "hero__white-background",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, "Ajouter en quelques clics les informations de votre centre communal d'action sociale"))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("section", {
+  }, "\uD83C\uDFE1 Contribuez en quelques clics \xE0 l'annuaire des CCAS\xA0!"))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("section", {
     className: "section section-white",
     id: "typography",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 39
     },
     __self: this
   }, "\uD83D\uDD0D V\xE9rifier les informations de votre CCAS"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_commune_input__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -32704,7 +32697,7 @@ function Index() {
     onChange: handleCommuneChange,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 40
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("section", {
@@ -32712,46 +32705,46 @@ function Index() {
     id: "typography",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 44
     },
     __self: this
   }, commune && !fetchingCCAS && (ccas && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 47
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 48
     },
     __self: this
   }, "\u2B50 La vile de ", commune.nom, " \xE0 un CCAS dans l'annuaire"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_ccas_view__WEBPACK_IMPORTED_MODULE_7__["default"], {
     ccas: ccas,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 49
     },
     __self: this
   })) || react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 53
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 54
     },
     __self: this
   }, "\uD83D\uDE1F ", commune.nom, " ne semble pas avoir de CCAS dans l'annuaire."), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 55
     },
     __self: this
   }, "\uD83D\uDCDD Ajoutez le\xA0!"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_ccas_form__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -32761,7 +32754,7 @@ function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 56
     },
     __self: this
   })))));
