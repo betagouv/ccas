@@ -30,7 +30,7 @@ export default function Index() {
     <Layout>
       <div className="hero" role="banner">
         <div className="hero__container">
-          <h1 className="hero__white-background">🏡 Contribuez en quelques clics à l'annuaire des CCAS&nbsp;!</h1>
+          <h1>🏡 Contribuez en quelques clics à l'annuaire des CCAS&nbsp;!</h1>
         </div>
       </div>
 
