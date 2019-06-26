@@ -32665,7 +32665,6 @@ function Index() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h1", {
-    className: "hero__white-background",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
